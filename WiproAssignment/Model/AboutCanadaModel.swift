@@ -9,9 +9,9 @@
 import UIKit
 // Model to map data from API response
 struct Product {
-    var productName : String?
-    var productImage : String?
-    var productDesc : String?
+    var title : String?
+    var description : String?
+    var imageHref : String?
 }
 
 // Model to map data from API response

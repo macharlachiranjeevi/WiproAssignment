@@ -11,49 +11,45 @@ import SDWebImage
 
 
 class CanadaListViewController: UITableViewController {
-
+    
     var canadaViewModel = CanadaViewModel()
-       let cellId = "cellId"
+    let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         tableView.refreshControl = refreshcontrol
+       
+        tableView.refreshControl = refreshcontrol
         
-               
-               tableView.rowHeight = UITableView.automaticDimension
-         tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
         tableView.register(ProductsTableViewCell.self, forCellReuseIdentifier: cellId)
-               tableView.allowsSelection = false
-               
-               self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
-      //  self.view.backgroundColor = .red
-
+        tableView.allowsSelection = false
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        //  self.view.backgroundColor = .red
+        
         // Do any additional setup after loading the view.
     }
     
     internal let refreshcontrol : UIRefreshControl = {
-        let rc = UIRefreshControl()
+        let refreshControl = UIRefreshControl()
         let title = NSLocalizedString("pullToRefresh", comment: "pullToRefresh")
-        rc.attributedTitle = NSAttributedString(string: title)
-        rc.addTarget(self, action: #selector(refreshOptions(sender:)), for: UIControl.Event.valueChanged)
-        return rc
+        refreshControl.attributedTitle = NSAttributedString(string: title)
+        refreshControl.addTarget(self, action: #selector(refreshOptions(sender:)), for: UIControl.Event.valueChanged)
+        return refreshControl
     }()
     
     override func viewWillAppear(_ animated: Bool) {
-          // intial return a funtion for refresh the content of information from APi
-          retrieveCanadaInformation()
-      }
-      
-      @objc private func refreshOptions(sender: UIRefreshControl) {
-          // Performed a actions to refresh the content of information from APi
-          retrieveCanadaInformation()
-      }
+        // intial return a funtion for refresh the content of information from APi
+        retrieveCanadaInformation()
+    }
     
-    
-    
+    @objc private func refreshOptions(sender: UIRefreshControl) {
+        // Performed a actions to refresh the content of information from APi
+        retrieveCanadaInformation()
+    }
     
     private func retrieveCanadaInformation() {
-      
+        
         canadaViewModel.fetchDataFromApi(successBlock: { (ProductList, title) in
             DispatchQueue.main.async{
                 [weak self] in
@@ -63,56 +59,51 @@ class CanadaListViewController: UITableViewController {
                 weakSelf.refreshcontrol.endRefreshing()
                 weakSelf.tableView.beginUpdates()
                 weakSelf.tableView.endUpdates()
-                      }
+            }
         }) { (errorString) in
             presentAlert(self, title: StaticString.error, buttonTitle: StaticString.cancel, message: errorString) { (UIAlertAction) in
-                
-                    self.refreshcontrol.endRefreshing()
-                }
+                self.refreshcontrol.endRefreshing()
             }
-           
         }
         
-        
-        
-        
-       
     }
     
-    
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 extension CanadaListViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
-       let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ProductsTableViewCell
-    
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ProductsTableViewCell
+        
         let currentLastItem = canadaViewModel.datalist[indexPath.row]
-        cell.textLabel?.text = currentLastItem.productName
-        cell.detailTextLabel?.text = currentLastItem.productDesc
+        cell.textLabel?.text = currentLastItem.title
+        cell.detailTextLabel?.text = currentLastItem.description
         cell.detailTextLabel?.numberOfLines = 0
-        let url = URL(string: currentLastItem.productImage!)
+        let url = URL(string: currentLastItem.imageHref!)
         cell.imageView?.contentMode = .scaleAspectFit
         cell.imageView?.sd_setImage(with: url, placeholderImage: nil, options: .continueInBackground, completed: { (image, error, cacheType, url) in
             if ( image != nil){
-            UIGraphicsBeginImageContext( CGSize(width: 60, height: 60) )
-            image?.draw(in: CGRect(x: 0,y: 0,width: 60,height: 60))
-            let newImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            cell.imageView!.image = newImage?.withRenderingMode(.alwaysOriginal)
+                UIGraphicsBeginImageContext( CGSize(width: 60, height: 60) )
+                image?.draw(in: CGRect(x: 0,y: 0,width: 60,height: 60))
+                let newImage = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                cell.imageView!.image = newImage?.withRenderingMode(.alwaysOriginal)
             }
-  
+            
         })
         
         return cell

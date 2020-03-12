@@ -23,7 +23,7 @@ class CanadaViewModel: NSObject {
                    }
             self.datalist = []
             for values in canadaArray{
-                self.datalist.append(Product(productName: values["title"] as? String ?? "No value", productImage: values["imageHref"] as? String ?? "No value", productDesc: values["description"] as? String ?? "No value"))
+                self.datalist.append(Product(title:values["title"] as? String ?? "No value", description: values["description"] as? String ?? "No value", imageHref: values["imageHref"] as? String ?? "No value"))
             }
             if(self.datalist.count > 0){
             productList = ProductList(with: tittle, self.datalist)
