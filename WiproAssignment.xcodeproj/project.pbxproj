@@ -3,17 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		075F4A8C241A8F240014F79D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4A8B241A8F240014F79D /* AppDelegate.swift */; };
 		075F4A8E241A8F240014F79D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4A8D241A8F240014F79D /* SceneDelegate.swift */; };
-		075F4A90241A8F240014F79D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4A8F241A8F240014F79D /* ViewController.swift */; };
 		075F4A95241A8F290014F79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075F4A94241A8F290014F79D /* Assets.xcassets */; };
 		075F4A98241A8F290014F79D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075F4A96241A8F290014F79D /* LaunchScreen.storyboard */; };
 		075F4AA3241A8F290014F79D /* WiproAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4AA2241A8F290014F79D /* WiproAssignmentTests.swift */; };
 		075F4AAE241A8F290014F79D /* WiproAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4AAD241A8F290014F79D /* WiproAssignmentUITests.swift */; };
+		075F4ABF241A91C10014F79D /* CanadaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4ABE241A91C10014F79D /* CanadaListViewController.swift */; };
+		075F4AC1241A920F0014F79D /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4AC0241A920F0014F79D /* ProductsTableViewCell.swift */; };
+		075F4AC3241A929C0014F79D /* AboutCanadaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4AC2241A929C0014F79D /* AboutCanadaModel.swift */; };
+		075F4AC7241A93630014F79D /* Constents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4AC5241A93630014F79D /* Constents.swift */; };
+		075F4AC8241A93630014F79D /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4AC6241A93630014F79D /* APIHandler.swift */; };
+		075F4ACA241A93BD0014F79D /* CanadaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4AC9241A93BD0014F79D /* CanadaViewModel.swift */; };
+		075F4ACC241A94800014F79D /* ApplicationDefults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4ACB241A94800014F79D /* ApplicationDefults.swift */; };
 		37090B33554BCCA07917F4DC /* Pods_WiproAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E6FC477B2DC870EF2D0670 /* Pods_WiproAssignment.framework */; };
 		7685D4C6A879F6EAC154DDFF /* Pods_WiproAssignment_WiproAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BA9393B2459E00609FDA72 /* Pods_WiproAssignment_WiproAssignmentUITests.framework */; };
 		7D9EABF9F1359845C777D44B /* Pods_WiproAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5AC62D882C066422CF5528 /* Pods_WiproAssignmentTests.framework */; };
@@ -40,7 +46,6 @@
 		075F4A88241A8F240014F79D /* WiproAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiproAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075F4A8B241A8F240014F79D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		075F4A8D241A8F240014F79D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		075F4A8F241A8F240014F79D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		075F4A94241A8F290014F79D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		075F4A97241A8F290014F79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		075F4A99241A8F290014F79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +55,13 @@
 		075F4AA9241A8F290014F79D /* WiproAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiproAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		075F4AAD241A8F290014F79D /* WiproAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiproAssignmentUITests.swift; sourceTree = "<group>"; };
 		075F4AAF241A8F290014F79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		075F4ABE241A91C10014F79D /* CanadaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanadaListViewController.swift; sourceTree = "<group>"; };
+		075F4AC0241A920F0014F79D /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		075F4AC2241A929C0014F79D /* AboutCanadaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutCanadaModel.swift; sourceTree = "<group>"; };
+		075F4AC5241A93630014F79D /* Constents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constents.swift; sourceTree = "<group>"; };
+		075F4AC6241A93630014F79D /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		075F4AC9241A93BD0014F79D /* CanadaViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanadaViewModel.swift; sourceTree = "<group>"; };
+		075F4ACB241A94800014F79D /* ApplicationDefults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDefults.swift; sourceTree = "<group>"; };
 		2F5AC62D882C066422CF5528 /* Pods_WiproAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiproAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E6FC477B2DC870EF2D0670 /* Pods_WiproAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiproAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBA32E6A81CCBC34FD684A2 /* Pods-WiproAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiproAssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-WiproAssignmentTests/Pods-WiproAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +128,10 @@
 			children = (
 				075F4A8B241A8F240014F79D /* AppDelegate.swift */,
 				075F4A8D241A8F240014F79D /* SceneDelegate.swift */,
-				075F4A8F241A8F240014F79D /* ViewController.swift */,
+				075F4ABB241A91610014F79D /* Model */,
+				075F4ABD241A918B0014F79D /* View */,
+				075F4ABC241A91700014F79D /* ViewModel */,
+				075F4AC4241A933E0014F79D /* Utils */,
 				075F4A94241A8F290014F79D /* Assets.xcassets */,
 				075F4A96241A8F290014F79D /* LaunchScreen.storyboard */,
 				075F4A99241A8F290014F79D /* Info.plist */,
@@ -142,6 +157,41 @@
 			path = WiproAssignmentUITests;
 			sourceTree = "<group>";
 		};
+		075F4ABB241A91610014F79D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				075F4AC2241A929C0014F79D /* AboutCanadaModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		075F4ABC241A91700014F79D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				075F4AC9241A93BD0014F79D /* CanadaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		075F4ABD241A918B0014F79D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				075F4ABE241A91C10014F79D /* CanadaListViewController.swift */,
+				075F4AC0241A920F0014F79D /* ProductsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		075F4AC4241A933E0014F79D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				075F4AC6241A93630014F79D /* APIHandler.swift */,
+				075F4AC5241A93630014F79D /* Constents.swift */,
+				075F4ACB241A94800014F79D /* ApplicationDefults.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		152CB1318BF10799836AF0AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +212,6 @@
 				3CBA32E6A81CCBC34FD684A2 /* Pods-WiproAssignmentTests.debug.xcconfig */,
 				C25CDE587AABBBEA736FD0D3 /* Pods-WiproAssignmentTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -404,9 +453,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				075F4A90241A8F240014F79D /* ViewController.swift in Sources */,
+				075F4AC8241A93630014F79D /* APIHandler.swift in Sources */,
 				075F4A8C241A8F240014F79D /* AppDelegate.swift in Sources */,
+				075F4AC7241A93630014F79D /* Constents.swift in Sources */,
+				075F4AC1241A920F0014F79D /* ProductsTableViewCell.swift in Sources */,
+				075F4ACA241A93BD0014F79D /* CanadaViewModel.swift in Sources */,
+				075F4ABF241A91C10014F79D /* CanadaListViewController.swift in Sources */,
 				075F4A8E241A8F240014F79D /* SceneDelegate.swift in Sources */,
+				075F4AC3241A929C0014F79D /* AboutCanadaModel.swift in Sources */,
+				075F4ACC241A94800014F79D /* ApplicationDefults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
