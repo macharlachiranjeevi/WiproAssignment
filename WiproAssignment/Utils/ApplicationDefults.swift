@@ -16,6 +16,16 @@ func presentAlert(_ target : UIViewController, title: String?, buttonTitle:Strin
     alrtCntr.addAction(okayAction)
     DispatchQueue.main.async {
         target.present(alrtCntr, animated: true, completion: nil)
-    }
+}
     
+}
+
+
+func imageFunction (image:UIImage,sizeValues:CGSize) -> UIImage{
+    
+    UIGraphicsBeginImageContext (sizeValues)
+    image.draw(in: CGRect(x: 0,y: 0,width: sizeValues.width,height: sizeValues.height))
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return (newImage?.withRenderingMode(.alwaysOriginal))!
 }

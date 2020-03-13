@@ -97,11 +97,7 @@ extension CanadaListViewController{
         cell.imageView?.contentMode = .scaleAspectFit
         cell.imageView?.sd_setImage(with: url, placeholderImage: nil, options: .continueInBackground, completed: { (image, error, cacheType, url) in
             if ( image != nil){
-                UIGraphicsBeginImageContext( CGSize(width: 60, height: 60) )
-                image?.draw(in: CGRect(x: 0,y: 0,width: 60,height: 60))
-                let newImage = UIGraphicsGetImageFromCurrentImageContext()
-                UIGraphicsEndImageContext()
-                cell.imageView!.image = newImage?.withRenderingMode(.alwaysOriginal)
+                cell.imageView!.image = imageFunction(image: image!, sizeValues: CGSize(width: 60, height: 60))
             }
             
         })
