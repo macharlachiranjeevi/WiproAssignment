@@ -82,6 +82,10 @@ class CanadaListViewController: UITableViewController {
  }
  */
 
+/* new feed back points are updated ProductsTableViewCell
+ 1. Font increament
+ 2. placeholder image
+ */
 
 extension CanadaListViewController{
     
@@ -91,15 +95,17 @@ extension CanadaListViewController{
         
         let currentLastItem = canadaViewModel.datalist[indexPath.row]
         cell.textLabel?.text = currentLastItem.title
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         cell.detailTextLabel?.text = currentLastItem.description
+        cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 18)
         cell.detailTextLabel?.numberOfLines = 0
         let url = URL(string: currentLastItem.imageHref!)
         cell.imageView?.contentMode = .scaleAspectFit
-        cell.imageView?.sd_setImage(with: url, placeholderImage: nil, options: .continueInBackground, completed: { (image, error, cacheType, url) in
+        cell.imageView?.sd_setImage(with: url, placeholderImage:imageFunction(image: #imageLiteral(resourceName: "placeholder"), sizeValues: CGSize(width: 60, height: 60)), options: .continueInBackground, completed: { (image, error, cacheType, url) in
             if ( image != nil){
                 cell.imageView!.image = imageFunction(image: image!, sizeValues: CGSize(width: 60, height: 60))
             }
-            
+         
         })
         
         return cell
