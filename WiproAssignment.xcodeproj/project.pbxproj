@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		075F4A8C241A8F240014F79D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4A8B241A8F240014F79D /* AppDelegate.swift */; };
-		075F4A8E241A8F240014F79D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4A8D241A8F240014F79D /* SceneDelegate.swift */; };
 		075F4A95241A8F290014F79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075F4A94241A8F290014F79D /* Assets.xcassets */; };
 		075F4A98241A8F290014F79D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075F4A96241A8F290014F79D /* LaunchScreen.storyboard */; };
 		075F4AA3241A8F290014F79D /* WiproAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F4AA2241A8F290014F79D /* WiproAssignmentTests.swift */; };
@@ -45,7 +44,6 @@
 /* Begin PBXFileReference section */
 		075F4A88241A8F240014F79D /* WiproAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiproAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075F4A8B241A8F240014F79D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		075F4A8D241A8F240014F79D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		075F4A94241A8F290014F79D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		075F4A97241A8F290014F79D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		075F4A99241A8F290014F79D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				075F4A8B241A8F240014F79D /* AppDelegate.swift */,
-				075F4A8D241A8F240014F79D /* SceneDelegate.swift */,
 				075F4ABB241A91610014F79D /* Model */,
 				075F4ABD241A918B0014F79D /* View */,
 				075F4ABC241A91700014F79D /* ViewModel */,
@@ -459,7 +456,6 @@
 				075F4AC1241A920F0014F79D /* ProductsTableViewCell.swift in Sources */,
 				075F4ACA241A93BD0014F79D /* CanadaViewModel.swift in Sources */,
 				075F4ABF241A91C10014F79D /* CanadaListViewController.swift in Sources */,
-				075F4A8E241A8F240014F79D /* SceneDelegate.swift in Sources */,
 				075F4AC3241A929C0014F79D /* AboutCanadaModel.swift in Sources */,
 				075F4ACC241A94800014F79D /* ApplicationDefults.swift in Sources */,
 			);
